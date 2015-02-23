@@ -1,3 +1,4 @@
+/*
 var postsData = [
   {
     title: 'Introducing Telescope',
@@ -30,4 +31,12 @@ var postsData = [
 ];
 Template.postsList.helpers({
   posts: postsData
+});
+*/
+
+// server/fixture.js
+Template.postsList.helpers({
+  posts: function() {
+    return Posts.find();
+  }
 });
